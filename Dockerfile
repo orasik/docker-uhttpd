@@ -4,8 +4,7 @@ MAINTAINER  Fletcher Nichol <fnichol@nichol.ca>
 RUN opkg-install uhttpd
 RUN printf '#!/bin/sh\nset -e\n\nchmod 755 /www\nexec /usr/sbin/uhttpd $*\n' > /usr/sbin/run_uhttpd && chmod 755 /usr/sbin/run_uhttpd
 
-VOLUME ["/www"]
-
+RUN printf 'mkdir /www'
 COPY /index.html /www
 
 EXPOSE 80
