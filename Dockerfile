@@ -9,4 +9,4 @@ COPY index.html /www
 EXPOSE 80
 
 ENTRYPOINT ["/usr/sbin/run_uhttpd", "-f", "-p", "80", "-h", "/www"]
-CMD ["sh /tmp/run.sh"]
+CMD [""]
