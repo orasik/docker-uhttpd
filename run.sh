@@ -1,2 +1,2 @@
 #!/bin/sh
-echo "OK" > index.html
+echo "OK" > /www/index.html
